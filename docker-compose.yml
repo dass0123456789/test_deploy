@@ -10,6 +10,8 @@ services:
     build: ./backend
     environment:
       DATABASE_URL: postgresql://postgres:1234@db:5432/workshop
+    volumes:
+      - ./uploads:/app/uploads
     depends_on:
       - db
     restart: unless-stopped
